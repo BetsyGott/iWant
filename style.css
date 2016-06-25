@@ -7,6 +7,8 @@
 }
 
 body {
+    width: 100vw !important;
+    height: 100vh !important;
     background-color: lightseagreen;
     background-image: linear-gradient(90deg, transparent 50%, rgba(255,255,255,.5) 50%);
     background-size: 90px 90px;
@@ -169,7 +171,7 @@ a.random-button:active {
 
 .prev, .next {
     color: white;
-    font-size: 10vh;
+    font-size: 5vh;
     padding: 3vh;
     position: fixed;
     top: 50%;
@@ -422,4 +424,69 @@ a.twitter-share-button {
 #twitter_btn_logo {
     width:20px;
     height:20px;
+}
+/*you tube player*/
+#ytplayer {
+    width: 60vw;
+    height: 30vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-5%);
+    /*width="854" height="480"*/
+}
+@media screen and (max-width: 1030px) and (orientation: portrait) {
+    #ytplayer {
+        width: 60vw;
+        height: 70vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,10%);
+    }
+    #read {
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    #twitter-share-button {
+        display: none !important;
+    }
+    #music-background{
+        filter: blur(10px);
+        -webkit-filter: blur(10px);
+        background-size: cover;
+        width: 200vw;
+        height: 120vh;
+        position: fixed;
+        top: -5vh;
+        left: -2vw;
+        z-index: -1;
+    }
+    #listen {
+        width: 100vw;
+        height: 100vh;
+    }
+    #listenInfoDiv {
+        font-size: 0;
+        position: relative;
+        width: 65vw;
+        height: 65vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 7px 8px -2px #000;
+    }
+    #audioControls {
+        margin: auto;
+        top: 30%;
+    }
+    select option{
+        width: 1%;
+        font-size: 12px;
+        padding: 3px 3px ;
+        font-weight:bold ;
+    }
+
 }
