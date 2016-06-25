@@ -49,7 +49,7 @@ section > div {
     left: 50%;
     /*top: 40px;*/
     width: 400px;
-    height: 130px;
+    height: 110px;
     transform: translate(-50%, -50%);
     overflow: hidden;
 }
@@ -440,6 +440,10 @@ a.twitter-share-button {
     /*width="854" height="480"*/
 }
 @media screen and (max-width: 1030px) and (orientation: portrait) {
+    * {
+        font-size: 16px;
+    }
+    /*watch page*/
     #ytplayer {
         width: 60vw;
         height: 70vh;
@@ -448,6 +452,7 @@ a.twitter-share-button {
         left: 50%;
         transform: translate(-50%,10%);
     }
+    /*read page*/
     #read {
         position: absolute;
         top:50%;
@@ -457,12 +462,13 @@ a.twitter-share-button {
     #twitter-share-button {
         display: none !important;
     }
+    /*listen page*/
     #music-background{
         filter: blur(10px);
         -webkit-filter: blur(10px);
         background-size: cover;
         width: 200vw;
-        height: 120vh;
+        height: 140vh;
         position: fixed;
         top: -5vh;
         left: -2vw;
@@ -472,6 +478,7 @@ a.twitter-share-button {
         width: 100vw;
         height: 100vh;
     }
+
     #listenInfoDiv {
         font-size: 0;
         position: relative;
@@ -484,15 +491,43 @@ a.twitter-share-button {
     }
     #audioControls {
         margin: auto;
-        top: 30%;
+        top: 35%;
+    }
+    /*landing page*/
+    .container {
+        padding: 20% 0;
+        height: 90vh;
+    }
+    h1 {
+        padding-top: 5%;
+    }
+    .blurb {
+        padding: 5% 0;
+    }
+    input {
+        width: 500px;
+    }
+    select {
+        padding-left: 10%;
+        text-align: center;
     }
     .select-element option{
+        text-align: center;
         float: left;
         overflow: hidden;
-        width: 1%;
         font-size: 12px;
-        padding: 3px 3px ;
+        padding-left: -50px !important ;
         font-weight:bold ;
+    }
+    .rb-wrapper {
+        padding-top: 5%;
+    }
+    a.random-button {
+        width: 250px;
+        margin-top: 20px;
+        height: 90px;
+        padding: 10px 30px;
+        font-size: 30px;
     }
 
 }
