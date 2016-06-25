@@ -3,6 +3,7 @@
     margin: 0;
     text-align: center;
     font-family: 'Raleway', sans-serif;
+    font-size: 8px;
     box-sizing: border-box;
 }
 
@@ -20,7 +21,7 @@ section > div {
 }
 
 .main-heading {
-    font-size: 6em;
+    font-size: 5em;
     text-shadow: 0 5px 4px #344152;
     color: #fff;
     background-color: transparent;
@@ -47,8 +48,8 @@ section > div {
     position: relative;
     left: 50%;
     /*top: 40px;*/
-    width: 500px;
-    height: 150px;
+    width: 400px;
+    height: 130px;
     transform: translate(-50%, -50%);
     overflow: hidden;
 }
@@ -127,13 +128,13 @@ a.now-button {
     text-shadow: 0 1px 1px #344152;
     text-decoration: none;
     color: white;
-    width: 300px;
-    height: 100px;
+    width: 200px;
+    height: 80px;
     top: 10px;
     background: #8BC34A;
     position: relative;
-    padding: 16px 50px;
-    font-size: 50px;
+    padding: 14px 50px;
+    font-size: 45px;
     border-radius: 10px;
     box-shadow: 0 7px 8px -2px #000;
     transition: all 0.2s;
@@ -188,8 +189,8 @@ a.random-button:active {
 /************** Select input styles ***************/
 select {
     background-color: transparent;
-    width: 500px;
-    padding: 0 0 0 200px;
+    width: 400px;
+    padding: 0 0 0 170px;
     color: #fff;
     border: none;
     border-bottom: 2px solid #fff;
@@ -482,7 +483,9 @@ a.twitter-share-button {
         margin: auto;
         top: 30%;
     }
-    select option{
+    .select-element option{
+        float: left;
+        overflow: hidden;
         width: 1%;
         font-size: 12px;
         padding: 3px 3px ;
