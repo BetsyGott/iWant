@@ -450,7 +450,7 @@ a.twitter-share-button {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,10%);
+        transform: translate(-50%,-10%);
     }
     /*read page*/
     #read {
@@ -486,12 +486,12 @@ a.twitter-share-button {
         height: 65vw;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-55%, -85%);
         box-shadow: 0 7px 8px -2px #000;
     }
     #audioControls {
         margin: auto;
-        top: 35%;
+        top: 25%;
     }
     /*landing page*/
     .container {
