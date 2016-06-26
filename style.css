@@ -8,20 +8,28 @@
 }
 
 body {
-    width: 100vw !important;
-    height: 100vh !important;
+    max-width: 1850px !important;
+    max-height: 500px !important;
     background-color: lightseagreen;
     background-image: linear-gradient(90deg, transparent 50%, rgba(255,255,255,.5) 50%);
     background-size: 90px 90px;
 
 }
+.container {
+    position: relative;
+    margin: auto 0;
+    max-width: 100vw;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%);
 
+}
 section > div {
     margin-top: 50px;
 }
 
 .main-heading {
-    font-size: 5em;
+    font-size: 4em;
     text-shadow: 0 5px 4px #344152;
     color: #fff;
     background-color: transparent;
@@ -35,6 +43,7 @@ section > div {
 }
 
 .blurb{
+    margin-right: 0 !important;
     font-size: 4em;
     text-shadow: 0 2px 6px #344152;
     color: white;
@@ -101,8 +110,8 @@ input[type=text]:hover{
 
 a.start-over-btn {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: -5%;
+    left: -10%;
     text-shadow: 0 1px 1px #344152;
     text-decoration: none;
     color: white;
@@ -117,7 +126,7 @@ a.start-over-btn {
 }
 
 a.start-over-btn:active {
-    top: 30px;
+    top: -2px;
     box-shadow: 0 7px 0 0 #000;
 }
 
@@ -178,12 +187,12 @@ a.random-button:active {
     font-size: 5vh;
     padding: 3vh;
     position: fixed;
-    top: 50%;
+    top: 30vh;
     transform: translateY(-50%);
 }
 
 .next {
-    right: 2%;
+    right: 0%;
 }
 
 /*end of button styles*/
@@ -230,7 +239,7 @@ select:hover {
 /*End of select input style*/
 
 .prev {
-    left: 2%
+    left: 1%
 }
 
 #listen {
@@ -320,11 +329,11 @@ div.tweet-box>div>h3 {
 #listenInfoDiv {
     font-size: 0;
     position: relative;
-    width: 120vh;
+    width: 100vh;
     height: 60vh;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -50%);
     box-shadow: 0 7px 8px -2px #000;
 }
 #insideInfo {
@@ -370,7 +379,7 @@ div.tweet-box>div>h3 {
     /*border: 1px solid black;*/
     /*background-color: rgba(255,255,255,0.9);*/
     position: relative;
-    top: 5%;
+    top: 20%;
 }
 
 #audio {
@@ -431,19 +440,53 @@ a.twitter-share-button {
 }
 /*you tube player*/
 #ytplayer {
-    width: 60vw;
+    width: 50vw;
     height: 30vw;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-5%);
+    transform: translate(-50%,5%);
     /*width="854" height="480"*/
 }
+
+@media screen and (max-width: 1030px) and (orientation: landscape) {
+    a.start-over-btn {
+        left: 0;
+    }
+    #listenInfoDiv {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+    }
+    #audioControls {
+        top:0;
+    }
+}
+
 @media screen and (max-width: 1030px) and (orientation: portrait) {
     * {
         font-size: 16px;
     }
     /*watch page*/
+    .prev {
+        left: -10%;
+        padding: 3%;
+    }
+    .next {
+        padding:3%;
+        right: -10%;
+    }
+    .prev, .next {
+        font-size: 5vw;
+    }
+    a.start-over-btn {
+        width: 200px;
+        height: 80px;
+        font-size: 35px;
+    }
+    a.start-over-btn:active {
+        top:-3%;
+    }
     #ytplayer {
         width: 60vw;
         height: 70vh;
@@ -454,10 +497,11 @@ a.twitter-share-button {
     }
     /*read page*/
     #read {
+        width: 110%;
         position: absolute;
         top:50%;
         left:50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%,-80%);
     }
     #twitter-share-button {
         display: none !important;
@@ -475,23 +519,24 @@ a.twitter-share-button {
         z-index: -1;
     }
     #listen {
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
     }
 
     #listenInfoDiv {
         font-size: 0;
         position: relative;
-        width: 65vw;
-        height: 65vw;
+        width: 60vw;
+        height: 60vw;
         top: 50%;
         left: 50%;
-        transform: translate(-55%, -85%);
+        transform: translate(-50%, -90%);
         box-shadow: 0 7px 8px -2px #000;
     }
     #audioControls {
         margin: auto;
-        top: 25%;
+        top: 10%;
+        left:-5%;
     }
     /*landing page*/
     .container {
@@ -508,7 +553,7 @@ a.twitter-share-button {
         width: 500px;
     }
     select {
-        padding-left: 10%;
+        padding-left: 20%;
         text-align: center;
     }
     .select-element option{
