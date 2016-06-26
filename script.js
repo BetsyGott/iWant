@@ -15,7 +15,7 @@ $(document).ready(function () {
     });
 
     $("#startOverBtn").click(function () {
-        console.log('clicked');
+        // console.log('clicked');
         iWant.queueArray = [];
         iWant.index = 0;
 
@@ -212,12 +212,12 @@ function watchAjax() {
         url: "http://s-apis.learningfuze.com/hackathon/youtube/search.php",
         success: function (response) {
             if (response.success) {
-                console.log("watch", response);
+                // console.log("watch", response);
                 //push response into resultsArray
                 for (i = 0; i < response.video.length; i++) {
                     iWant.queueArray.push(response.video[i]);
                 }
-                console.log("results array", iWant.queueArray);
+                // console.log("results array", iWant.queueArray);
 
                 //call display function
                 displayWatch();
@@ -225,7 +225,7 @@ function watchAjax() {
                 // return results array
                 return response;
             } else {
-                console.log(response);
+                // console.log(response);
                 displayError(watch);
                 //return error message
             }
@@ -249,7 +249,7 @@ function listenAjax() {
         },
 
         success: function (response) {
-            console.log('spotify', response);
+            // console.log('spotify', response);
 
 
             for (i = 0; i < response.tracks.items.length; i++) {
